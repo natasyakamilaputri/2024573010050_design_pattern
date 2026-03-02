@@ -1,10 +1,9 @@
-package modul_1.latihan;
+package pratikum_1;
 
-public class ForGanjil {
+public class perulangan {
     public static void main(String[] args){
-        for (int i = 1; i <= 20; i++) {
+        for (int i = 1; i <= 5; i++) {
             System.out.println("Itersi ke-" + i);
         }
     }
 }
-
