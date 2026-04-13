@@ -1,4 +1,816 @@
-# Laporan 2: Review 4 Pillar OOP Menggunakan Java
+# Laporan 2 : Review Konsep Dasar OOP Menggunakan Java
+**Mata Kuliah:** Praktikum Pemrograman Desain Pattern  
+**Nama:**[Natasya kamila putri]  
+**NIM:** [2024573010050]  
+**Kelas:** [TI 2A]
+
+---
+
+## Abstrak
+
+Modul ini membahas review konsep dasar Pemrograman Berorientasi Objek (OOP) menggunakan bahasa Java. Tujuan dari pembelajaran ini adalah agar aku dan teman-teman dapat memahami dasar-dasar OOP, mulai dari pembuatan dan penggunaan class, object, attribute, hingga method. Selain itu, modul ini juga membantu memahami penggunaan access modifier seperti public, private, protected, dan default, serta bagaimana mengimplementasikan setter dan getter untuk mengelola data dalam program.
+
+Tidak hanya itu, melalui modul ini juga dipelajari penggunaan constructor, baik default, parameterized, maupun constructor overloading, agar proses pembuatan objek menjadi lebih fleksibel. Dengan memahami konsep class sebagai blueprint dan object sebagai hasil implementasinya, diharapkan kami mampu menerapkan konsep OOP dalam membuat program sederhana secara lebih terstruktur dan mudah dipahami.
+
+##  1.Pendahuluan
+
+Pemrograman Berorientasi Objek (Object-Oriented Programming/OOP) merupakan salah satu konsep penting dalam pengembangan perangkat lunak, khususnya dalam bahasa Java. Konsep ini memungkinkan program disusun dengan lebih terstruktur melalui penggunaan class dan object sebagai dasar utama. Dengan pendekatan ini, pengelolaan kode menjadi lebih rapi, mudah dipahami, serta lebih fleksibel untuk dikembangkan.
+
+Dalam mempelajari OOP, terdapat beberapa konsep dasar yang perlu dipahami, seperti class, object, attribute, method, serta penggunaan access modifier yang meliputi public, private, protected, dan default. Selain itu, pemahaman mengenai penggunaan setter dan getter juga penting untuk mengatur akses terhadap data dalam suatu class. Tidak kalah penting, constructor juga digunakan untuk menginisialisasi objek dengan berbagai bentuk, seperti default constructor, parameterized constructor, dan constructor overloading.
+
+Melalui modul ini, diharapkan mahasiswa dapat memahami dan mengimplementasikan konsep-konsep dasar OOP dalam pembuatan program sederhana. Dengan pemahaman tersebut, mahasiswa diharapkan mampu menyelesaikan permasalahan pemrograman secara lebih sistematis, terstruktur, dan sesuai dengan paradigma OOP.
+
+
+## 2.  Pratikum
+
+### BAGIAN 1
+
+### langkah pratikum
+
+1. Buka project pada praktikum sebelumnya menggunakan intellij IDEA
+2. Buat sebuah package baru di dalam folder src dengan cara klik kanan pada folder src kemudian pilih New -> Package. Beri nama modul_2.
+3. Buat Sebuah package baru lagi didalam package pratikum_2 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_1
+4. Kemudian buat sebuah class baru dengan nama Mahasiswa dan isikan kode berikut:
+
+         package pratikum_2.bagian_1;
+
+         public class Mahasiswa {
+         String nama;
+         int umur;
+          }
+
+
+### analisis dan pembahasan
+
+Kode program ini mendefinisikan kelas **Mahasiswa** sebagai representasi sederhana dari sebuah objek dengan dua atribut, yaitu **nama** dan **umur**. Kedua atribut tersebut masih menggunakan akses default (tanpa *modifier*), sehingga dapat diakses langsung dalam satu package. Kelas ini belum memiliki metode, sehingga hanya berfungsi sebagai wadah data (*data container*). Secara konsep, kode ini menunjukkan dasar dari pemrograman berorientasi objek, khususnya dalam pembuatan kelas dan atribut, meskipun belum menerapkan *encapsulation* secara penuh karena atributnya masih dapat diakses langsung tanpa melalui *getter* atau *setter*.
+
+
+### langkah pratikum
+1. buat class baru di dalam package bagian1 dengan nama main
+2. ketik kode programnya
+
+        package pratikum_2.bagian_1;
+
+        public class Main {
+        public static void main(String[] args) {
+        // Membuat object dari class Mahasiswa
+        Mahasiswa mhs1 = new Mahasiswa();
+
+        // Mengisi nilai atribut
+        mhs1.nama = "Budi";
+        mhs1.umur = 20;
+
+        // Menampilkan nilai atribut
+        System.out.println("Nama: " + mhs1.nama);
+        System.out.println("Umur: " + mhs1.umur);
+          }
+         }
+
+### screenshoot hasil
+
+![gambar](./gambar/gambar1.png)
+
+### analisis dan pembahasan
+
+Kode program ini menunjukkan penggunaan kelas **Mahasiswa** dalam program utama melalui pembuatan objek **mhs1**. Setelah objek dibuat, nilai atribut **nama** dan **umur** diisi secara langsung, kemudian ditampilkan ke layar menggunakan *output* standar. Pendekatan ini memperlihatkan cara dasar dalam mengakses dan memanipulasi atribut objek, namun masih belum menerapkan prinsip *encapsulation* karena atribut diakses tanpa melalui metode *getter* atau *setter*. Secara keseluruhan, kode ini menggambarkan konsep dasar pembuatan objek dan interaksi sederhana dengan atribut dalam pemrograman berorientasi objek.
+
+
+### tugas latihan bagian1 (Buku)
+
+### langkah pratikum
+1. buat class baru di dalam package latihan_1 dengan nama Buku
+2. ketik kode programnya
+
+      package pratikum_2.latihan.latihan_1;
+
+      public class Buku {
+
+      // Attribute
+      String judul;
+      String pengarang;
+      }
+
+
+### analisis dan pembahasan
+
+Kode program ini mendefinisikan kelas **Buku** yang memiliki dua atribut utama, yaitu **judul** dan **pengarang**. Kedua atribut tersebut masih menggunakan akses default, sehingga dapat diakses langsung dalam satu package tanpa perlu metode khusus. Kelas ini berfungsi sebagai representasi sederhana dari sebuah objek buku dalam konsep pemrograman berorientasi objek, namun belum menerapkan *encapsulation* karena tidak terdapat *getter* maupun *setter* untuk menjaga keamanan dan pengelolaan data. Secara keseluruhan, kode ini menunjukkan tahap awal dalam pembuatan kelas sebagai cetak biru objek yang menyimpan informasi dasar.
+
+
+### langkah pratikum
+1. buat class baru di dalam package latihan_1 dengan nama Main
+2. ketik kode programnya
+
+       package pratikum_2.latihan.latihan_1;
+
+       public class Main {
+       public static void main(String[] args) {
+
+        // Membuat object dari class Buku
+        Buku buku1 = new Buku();
+
+        // Mengisi nilai atribut
+        buku1.judul = "Pemrograman Java";
+        buku1.pengarang = "Andi";
+
+        // Menampilkan nilai atribut
+        System.out.println("Judul Buku: " + buku1.judul);
+        System.out.println("Pengarang: " + buku1.pengarang);
+          }
+        }
+
+### screenshoot hasi
+
+![gambar](./gambar/gambar2.png)
+
+### analisis dan pembahasan
+
+Kode program ini menunjukkan penggunaan kelas **Buku** dalam program utama dengan cara membuat objek **buku1**. Setelah objek dibuat, atribut **judul** dan **pengarang** diisi secara langsung, kemudian nilai tersebut ditampilkan ke layar menggunakan perintah output. Hal ini menggambarkan proses dasar dalam pemrograman berorientasi objek, yaitu pembuatan objek dan akses atributnya. Namun, karena atribut masih dapat diakses secara langsung tanpa *getter* atau *setter*, maka prinsip *encapsulation* belum diterapkan sepenuhnya. Secara keseluruhan, program ini memberikan gambaran sederhana tentang bagaimana objek digunakan untuk menyimpan dan menampilkan data.
+
+
+### BAGIAN 2
+### langkah pratikum
+
+1. Buat Sebuah package baru lagi didalam package pratikum_2 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_2
+2. Kemudian buat sebuah class baru dengan nama Kalkulator dan isikan kode berikut:
+
+      package pratikum_2.bagian_2;
+
+      public class Kalkulator {
+      // Atribut
+      int angka1;
+      int angka2;
+
+       // Method
+       int tambah() {
+       return angka1 + angka2;
+        }
+       }
+
+
+### analisis dan pembahasan
+
+Kode program ini mendefinisikan kelas **Kalkulator** yang memiliki dua atribut, yaitu **angka1** dan **angka2** sebagai penyimpan nilai yang akan dioperasikan. Selain itu, terdapat sebuah metode **tambah()** yang berfungsi untuk menjumlahkan kedua nilai tersebut dan mengembalikan hasilnya. Kelas ini menunjukkan konsep dasar pemrograman berorientasi objek, yaitu penggabungan data dan perilaku dalam satu kesatuan objek. Namun, karena atribut masih bersifat publik secara default dan belum menggunakan *encapsulation* seperti *getter* atau *setter*, maka pengelolaan datanya masih sederhana dan belum sepenuhnya aman. Secara keseluruhan, kode ini menggambarkan implementasi dasar operasi penjumlahan dalam bentuk objek.
+
+
+### langkah pratikum
+1. buat class baru di dalam package bagian2 dengan nama main
+2. ketik kode programnya
+
+        package pratikum_2.bagian_2;
+
+        public class Main {
+        public static void main(String[] args) {
+        Kalkulator kalkulator = new Kalkulator();
+        kalkulator.angka1 = 5;
+        kalkulator.angka2 = 10;
+
+        System.out.println("Hasil Penjumlahan: " + kalkulator.tambah());
+        }
+         }
+
+    
+### screenshoot hasil
+
+![gambar](./gambar/gambar3.png)
+
+### analisis dan pembahasan
+  
+  Kode program ini menunjukkan penggunaan kelas **Kalkulator** melalui kelas utama **Main** dengan cara membuat objek **kalkulator**. Setelah objek dibuat, nilai atribut **angka1** dan **angka2** diisi secara langsung, kemudian metode **tambah()** dipanggil untuk menghitung hasil penjumlahan kedua nilai tersebut dan menampilkannya ke layar. Program ini menggambarkan konsep dasar pemrograman berorientasi objek, yaitu interaksi antara objek dan metode yang dimilikinya. Namun, karena atribut masih dapat diakses secara langsung tanpa *encapsulation*, pengelolaan datanya masih bersifat sederhana dan belum sepenuhnya aman. Secara keseluruhan, program ini memperlihatkan proses dasar operasi penjumlahan berbasis objek dalam Java.
+
+
+### tugas latihan bagian2 (lingkaran)
+
+### langkah pratikum
+1. buat class baru di dalam package latihan_2 dengan nama lingkaran
+2. ketik kode programnya
+
+      package pratikum_2.latihan.latihan_2;
+
+      public class Lingkaran {
+      // Attribute
+      double jariJari;
+
+      // Constructor
+      public Lingkaran(double jariJari) {
+        this.jariJari = jariJari;
+       }
+
+       // Method untuk menghitung luas lingkaran
+       public double hitungLuas() {
+        return Math.PI * jariJari * jariJari;
+         }
+        }
+
+### analisis dan pembahasan
+
+Kode program ini mendefinisikan kelas **Lingkaran** yang memiliki atribut **jariJari** untuk menyimpan nilai radius. Kelas ini dilengkapi dengan konstruktor yang digunakan untuk menginisialisasi nilai jari-jari saat objek dibuat, sehingga data langsung terisi sejak awal. Selain itu, terdapat metode **hitungLuas()** yang berfungsi untuk menghitung luas lingkaran menggunakan rumus π × r × r dengan bantuan konstanta **Math.PI**. Secara keseluruhan, program ini menggambarkan penerapan dasar pemrograman berorientasi objek, khususnya penggunaan konstruktor dan metode untuk mengolah data dalam sebuah objek secara lebih terstruktur dan efisien.
+
+### langkah pratikum
+1. buat class baru di dalam package latihan_2 dengan nama Main
+2. ketik kode programnya
+
+package pratikum_2.latihan.latihan_2;
+
+      public class Main {
+      public static void main(String[] args) {
+
+        // Membuat object dari class Lingkaran
+        Lingkaran lingkaran1 = new Lingkaran(7);
+
+        // Memanggil method hitungLuas()
+        double luas = lingkaran1.hitungLuas();
+
+        // Menampilkan hasil
+        System.out.println("Jari-jari lingkaran: " + lingkaran1.jariJari);
+        System.out.println("Luas lingkaran: " + luas);
+         }
+        }
+
+### screenshoot hasil
+
+![gambar](./gambar/gambar4.png)
+
+### analisis dan pembahasan
+
+Kode program ini menunjukkan penggunaan kelas **Lingkaran** melalui kelas utama **Main** dengan cara membuat objek **lingkaran1** dan memberikan nilai jari-jari melalui konstruktor. Setelah objek terbentuk, metode **hitungLuas()** dipanggil untuk menghitung luas lingkaran berdasarkan nilai yang telah diinputkan, kemudian hasilnya disimpan dalam variabel **luas**. Selanjutnya, program menampilkan nilai jari-jari serta hasil perhitungan luas ke layar. Secara keseluruhan, kode ini menggambarkan penerapan dasar pemrograman berorientasi objek, khususnya penggunaan konstruktor, pemanggilan metode, serta pengolahan data dalam objek secara terstruktur dan sederhana.
+
+
+### BAGIAN 3
+### langkah pratikum
+
+1. Buat Sebuah package baru lagi didalam package pratikum_2 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_3
+2. Kemudian buat sebuah class baru dengan nama AksesModifier dan isikan kode berikut:
+
+      package pratikum_2.bagian_3;
+
+      public class AksesModifier {
+      public int publicVar = 1;
+      private int privateVar = 2;
+      protected int protectedVar = 3;
+      int defaultVar = 4; // default
+
+        public void tampilkan() {
+        System.out.println("Public: " + publicVar);
+        System.out.println("Private: " + privateVar);
+        System.out.println("Protected: " + protectedVar);
+        System.out.println("Default: " + defaultVar);
+        }
+         }
+
+### analisis dan pembahasan
+
+Kode program ini menunjukkan penerapan berbagai jenis *access modifier* dalam Java melalui kelas **AksesModifier**, yaitu *public*, *private*, *protected*, dan *default*. Setiap variabel memiliki tingkat akses yang berbeda, di mana **publicVar** dapat diakses dari mana saja, **privateVar** hanya dapat diakses di dalam kelas itu sendiri, **protectedVar** dapat diakses dalam package yang sama maupun melalui inheritance, sedangkan **defaultVar** hanya dapat diakses dalam package yang sama. Selain itu, terdapat metode **tampilkan()** yang digunakan untuk menampilkan seluruh nilai variabel tersebut dalam satu output. Secara keseluruhan, program ini menggambarkan konsep *encapsulation* dan pengendalian akses data, sehingga struktur program menjadi lebih aman, terorganisir, dan mudah dikelola.
+
+### langkah pratikum
+1. buat class baru di dalam package bagian3 dengan nama main
+2. ketik kode programnya
+
+      package pratikum_2.bagian_3;
+
+      public class Main {
+      public static void main(String[] args) {
+        AksesModifier contoh = new AksesModifier();
+        contoh.tampilkan();
+
+        // System.out.println(contoh.privateVar); // Error: privateVar tidak dapat diakses
+         }
+         }
+
+### screenshoot hasil
+
+![gambar](./gambar/gambar5.png)
+
+### analisis dan pembahasan
+
+Kode program ini memperlihatkan penggunaan kelas **AksesModifier** melalui kelas utama **Main** dengan membuat objek **contoh**. Setelah objek dibuat, metode **tampilkan()** dipanggil untuk menampilkan nilai dari berbagai variabel dengan tingkat akses yang berbeda. Program ini juga menunjukkan penerapan *access modifier*, di mana variabel **privateVar** tidak dapat diakses langsung dari luar kelas, sehingga jika dipanggil akan menghasilkan error. Hal ini menegaskan konsep *encapsulation* dalam pemrograman berorientasi objek, yaitu membatasi akses langsung terhadap data untuk menjaga keamanan dan keteraturan struktur program. Secara keseluruhan, kode ini memberikan pemahaman tentang perbedaan hak akses antar variabel dalam Java.
+
+
+### tugas latihan bagian3 (akunbank)
+
+### langkah pratikum
+1. buat class baru di dalam package latihan_3 dengan nama akunbank
+2. ketik kode programnya
+
+     package pratikum_2.latihan.latihan_3;
+
+     public class AkunBank {
+     // Attribute dengan akses private
+     private double saldo;
+
+     // Constructor
+     public AkunBank(double saldo) {
+        this.saldo = saldo;
+     }
+
+      // Method public untuk menampilkan saldo
+      public void tampilkanSaldo() {
+      System.out.println("Saldo saat ini: " + saldo);
+       }
+      }
+
+### analisis dan pembahasan
+
+Kode program ini mendefinisikan kelas **AkunBank** yang menerapkan konsep *encapsulation* melalui atribut **saldo** yang bersifat *private*, sehingga tidak dapat diakses langsung dari luar kelas. Nilai saldo diinisialisasi melalui konstruktor, yang memastikan data sudah terisi saat objek dibuat. Selain itu, terdapat metode **tampilkanSaldo()** yang bersifat *public* untuk menampilkan informasi saldo secara aman tanpa memberikan akses langsung ke variabelnya. Secara keseluruhan, program ini menunjukkan penerapan dasar pemrograman berorientasi objek dalam menjaga keamanan data sekaligus menyediakan cara terkontrol untuk mengakses informasi.
+
+### langkah pratikum
+1. buat class baru di dalam package latihan_3 dengan nama Main
+2. ketik kode programnya
+
+      package pratikum_2.latihan.latihan_3;
+
+      public class Main {
+      public static void main(String[] args) {
+
+        // Membuat object
+        AkunBank akun = new AkunBank(1000000);
+
+        // Mengakses method public
+        akun.tampilkanSaldo();
+
+        // Mencoba mengakses atribut langsung (akan error)
+        // System.out.println(akun.saldo);
+        }
+      }
+
+### screenshoot hasil
+
+![gambar](./gambar/gambar6.png)
+
+### analisis dan pembahasan
+
+Kode program ini menunjukkan penggunaan kelas **AkunBank** melalui kelas utama **Main** dengan membuat objek **akun** yang diinisialisasi dengan nilai saldo awal. Setelah objek dibuat, metode **tampilkanSaldo()** dipanggil untuk menampilkan informasi saldo secara aman melalui akses *public*. Program ini juga memperlihatkan penerapan konsep *encapsulation*, di mana atribut **saldo** tidak dapat diakses secara langsung dari luar kelas karena bersifat *private*, sehingga jika dipanggil langsung akan menghasilkan error. Secara keseluruhan, kode ini menegaskan pentingnya pembatasan akses data untuk menjaga keamanan serta pengelolaan informasi yang lebih terstruktur dalam pemrograman berorientasi objek.
+
+
+### BAGIAN 4
+### langkah pratikum
+
+1. Buat Sebuah package baru lagi didalam package pratikum_2 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_4
+2. Kemudian buat sebuah class baru dengan nama Mobil dan isikan kode berikut:
+
+     package pratikum_2.bagian_4;
+
+     public class Mobil {
+     private String merk;
+
+     // Setter
+     public void setMerk(String merk) {
+        this.merk = merk;
+     }
+
+     // Getter
+     public String getMerk() {
+        return merk;
+      }
+     }
+
+### analisis dan pembahasan
+
+Kode program ini mendefinisikan kelas **Mobil** yang menerapkan konsep *encapsulation* melalui penggunaan atribut **merk** yang bersifat *private*, sehingga tidak dapat diakses secara langsung dari luar kelas. Untuk mengelola nilai tersebut, disediakan metode *setter* **setMerk()** yang berfungsi memberikan atau mengubah nilai merk, serta metode *getter* **getMerk()** yang digunakan untuk mengambil nilai merk secara terkontrol. Pendekatan ini membuat pengelolaan data menjadi lebih aman dan terstruktur karena akses terhadap atribut tidak dilakukan secara langsung. Secara keseluruhan, program ini menggambarkan penerapan dasar prinsip enkapsulasi dalam pemrograman berorientasi objek untuk menjaga keamanan dan konsistensi data.
+
+### langkah pratikum
+1. buat class baru di dalam package bagian_4 dengan nama Main
+2. ketik kode programnya
+
+     package pratikum_2.bagian_4;
+
+     public class Main {
+      public static void main(String[] args) {
+        Mobil mobil = new Mobil();
+        mobil.setMerk("Toyota");
+
+        System.out.println("Merk Mobil: " + mobil.getMerk());
+       }
+      }
+
+### screenshoot hasil
+
+![gambar](./gambar/gambar7.png)
+
+### analisis dan pembahasan
+
+Kode program ini menunjukkan penggunaan kelas **Mobil** melalui kelas utama **Main** dengan menerapkan konsep *encapsulation*. Objek **mobil** dibuat terlebih dahulu, kemudian nilai atribut **merk** diisi menggunakan metode *setter* **setMerk()**, sehingga tidak ada akses langsung ke variabel private di dalam kelas. Setelah itu, nilai merk diambil menggunakan metode *getter* **getMerk()** dan ditampilkan ke layar. Pendekatan ini memperlihatkan pengelolaan data yang lebih aman dan terstruktur, karena akses terhadap atribut dibatasi melalui metode khusus. Secara keseluruhan, program ini menegaskan penerapan prinsip enkapsulasi dalam pemrograman berorientasi objek untuk menjaga konsistensi dan keamanan data.
+
+
+### tugas latihan bagian4 (Mahasiswa)
+
+### langkah pratikum
+1. buat class baru di dalam package latihan_4 dengan nama Mahasiswa
+2. ketik kode programnya
+
+      package pratikum_2.latihan.latihan_4;
+
+      public class Mahasiswa {
+       // Attribute (private)
+      private String nama;
+      private String nim;
+
+      // Setter untuk nama
+      public void setNama(String nama) {
+        this.nama = nama;
+       }
+
+      // Getter untuk nama
+      public String getNama() {
+        return nama;
+      }
+
+      // Setter untuk nim
+      public void setNim(String nim) {
+        this.nim = nim;
+      }
+
+      // Getter untuk nim
+      public String getNim() {
+        return nim;
+       }
+     }
+
+### analisis dan pembahasan
+
+Kode program ini mendefinisikan kelas **Mahasiswa** yang menerapkan konsep *encapsulation* dengan menjadikan atribut **nama** dan **nim** sebagai *private*, sehingga tidak dapat diakses secara langsung dari luar kelas. Untuk mengelola data tersebut, disediakan metode *setter* dan *getter* pada masing-masing atribut, yaitu **setNama()**, **getNama()**, **setNim()**, dan **getNim()**. Pendekatan ini memungkinkan pengaturan serta pengambilan data dilakukan secara terkontrol dan lebih aman. Secara keseluruhan, program ini menunjukkan penerapan prinsip dasar pemrograman berorientasi objek dalam menjaga keamanan data sekaligus memastikan akses informasi tetap terstruktur.
+
+
+### langkah pratikum
+1. buat class baru di dalam package latihan_4 dengan nama Main
+2. ketik kode programnya
+
+     package pratikum_2.latihan.latihan_4;
+
+      public class Main {
+      public static void main(String[] args) {
+
+        // Membuat object Mahasiswa
+        Mahasiswa mhs1 = new Mahasiswa();
+
+        // Mengisi nilai atribut menggunakan setter
+        mhs1.setNama("Budi Santoso");
+        mhs1.setNim("23012345");
+
+        // Mengambil dan menampilkan nilai menggunakan getter
+        System.out.println("Nama Mahasiswa: " + mhs1.getNama());
+        System.out.println("NIM Mahasiswa: " + mhs1.getNim());
+        } 
+       }
+
+
+### screenshoot hasil 
+
+![gambar](./gambar/gambar8.png)
+
+### analisis dan pembahasan
+
+Kode program ini memperlihatkan penggunaan kelas **Mahasiswa** melalui kelas utama **Main** dengan menerapkan konsep *encapsulation*. Objek **mhs1** dibuat terlebih dahulu, kemudian nilai atribut **nama** dan **nim** diisi menggunakan metode *setter* yaitu **setNama()** dan **setNim()**, sehingga data tidak diakses secara langsung dari luar kelas. Selanjutnya, data tersebut diambil kembali menggunakan metode *getter* **getNama()** dan **getNim()** untuk ditampilkan ke layar. Pendekatan ini menunjukkan pengelolaan data yang lebih aman, terstruktur, dan sesuai dengan prinsip pemrograman berorientasi objek, karena akses terhadap atribut dibatasi melalui metode khusus.
+
+
+### BAGIAN 5
+### langkah pratikum
+
+1. Buat Sebuah package baru lagi didalam package pratikum_2 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_5
+2. Kemudian buat sebuah class baru dengan nama Person dan isikan kode berikut:
+
+      package pratikum_2.bagian_5;
+
+      public class Person {
+      private String nama;
+      private int umur;
+
+       // Default Constructor
+       public Person() {
+        nama = "Unknown";
+        umur = 0;
+       }
+
+       // Parameterized Constructor
+       public Person(String nama, int umur) {
+        this.nama = nama;
+        this.umur = umur;
+       }
+
+        // Method
+        public void tampilkanInfo() {
+        System.out.println("Nama: " + nama);
+        System.out.println("Umur: " + umur);
+          }
+         }
+
+### analisis dan pembahasan
+
+Kode program ini mendefinisikan kelas **Person** yang menerapkan konsep *constructor overloading* untuk memberikan fleksibilitas dalam pembuatan objek. Terdapat dua jenis konstruktor, yaitu *default constructor* yang memberikan nilai awal “Unknown” pada atribut **nama** dan 0 pada **umur**, serta *parameterized constructor* yang memungkinkan pengisian nilai sesuai input saat objek dibuat. Selain itu, terdapat metode **tampilkanInfo()** yang digunakan untuk menampilkan data objek berupa nama dan umur. Secara keseluruhan, program ini menunjukkan penerapan dasar pemrograman berorientasi objek, khususnya dalam pengelolaan inisialisasi objek yang lebih fleksibel dan terstruktur.
+
+
+### langkah pratikum
+1. buat class baru di dalam package bagian_5 dengan nama Main
+2. ketik kode programnya
+
+      package pratikum_2.bagian_5;
+
+      public class Main {
+       public static void main(String[] args) {
+        Person person1 = new Person();
+        Person person2 = new Person("Budi", 25);
+
+        person1.tampilkanInfo();
+        person2.tampilkanInfo();
+        }
+     }
+
+### screenshoot hasil
+
+![gambar](./gambar/gambar9.png)
+
+### analisis dan pembahasan
+
+Kode program ini menunjukkan penggunaan kelas **Person** melalui kelas utama **Main** dengan menerapkan konsep *constructor overloading*. Pada program ini dibuat dua objek, yaitu **person1** yang menggunakan *default constructor* sehingga nilai atributnya otomatis diisi “Unknown” dan 0, serta **person2** yang menggunakan *parameterized constructor* dengan nilai “Budi” dan 25. Setelah objek dibuat, metode **tampilkanInfo()** dipanggil untuk menampilkan data masing-masing objek. Secara keseluruhan, program ini memperlihatkan bagaimana konstruktor dapat memberikan fleksibilitas dalam proses inisialisasi objek serta mendukung penerapan dasar pemrograman berorientasi objek secara lebih terstruktur.
+
+
+### tugas latihan bagian5 (Barang)
+
+### langkah pratikum
+1. buat class baru di dalam package latihan_5 dengan nama Barang
+2. ketik kode programnya
+
+     package pratikum_2.latihan.latihan_5;
+
+      public class Barang {
+      // Attribute
+       String namaBarang;
+       double harga;
+
+       // Default Constructor
+       public Barang() {
+        namaBarang = "Tidak diketahui";
+        harga = 0;
+        }
+
+        // Parameterized Constructor
+        public Barang(String namaBarang, double harga) {
+        this.namaBarang = namaBarang;
+        this.harga = harga;
+         }
+
+         // Method untuk menampilkan data
+          public void tampilkanData() {
+           System.out.println("Nama Barang: " + namaBarang);
+          System.out.println("Harga: " + harga);
+          }
+        }
+
+
+### analisis dan pembahasan
+
+Kode program ini mendefinisikan kelas **Barang** yang menerapkan konsep *constructor overloading* untuk mengatur proses inisialisasi objek. Terdapat dua konstruktor, yaitu *default constructor* yang memberikan nilai awal “Tidak diketahui” pada **namaBarang** dan 0 pada **harga**, serta *parameterized constructor* yang memungkinkan pengisian nilai sesuai input saat objek dibuat. Selain itu, terdapat metode **tampilkanData()** yang berfungsi untuk menampilkan informasi barang berupa nama dan harga. Secara keseluruhan, program ini menggambarkan penerapan dasar pemrograman berorientasi objek yang lebih fleksibel dalam pembuatan dan pengelolaan objek.
+
+
+### langkah pratikum
+1. buat class baru di dalam package latihan_5 dengan nama Main
+2. ketik kode programnya
+
+      package pratikum_2.latihan.latihan_5;
+
+      public class Main {
+       public static void main(String[] args) {
+
+        // Object menggunakan Default Constructor
+        Barang barang1 = new Barang();
+        System.out.println("Data Barang 1:");
+        barang1.tampilkanData();
+
+        System.out.println();
+
+        // Object menggunakan Parameterized Constructor
+        Barang barang2 = new Barang("Laptop", 7500000);
+        System.out.println("Data Barang 2:");
+        barang2.tampilkanData();
+         }
+       }
+
+### screenshoot hasil
+
+![gambar](./gambar/gambar10.png)
+
+### analisis dan pembahasan
+
+Kode program ini menunjukkan penggunaan kelas **Barang** melalui kelas utama **Main** dengan menerapkan konsep *constructor overloading*. Pada program ini dibuat dua objek, yaitu **barang1** yang menggunakan *default constructor* sehingga nilai atributnya diisi secara otomatis dengan “Tidak diketahui” dan 0, serta **barang2** yang menggunakan *parameterized constructor* dengan nilai “Laptop” dan 7.500.000. Setelah objek dibuat, metode **tampilkanData()** dipanggil untuk menampilkan informasi masing-masing barang. Secara keseluruhan, program ini menggambarkan bagaimana konstruktor dapat memberikan fleksibilitas dalam proses inisialisasi objek serta mempermudah pengelolaan data secara lebih terstruktur dalam pemrograman berorientasi objek.
+
+
+### BAGIAN 6
+### langkah pratikum
+
+1. Buat Sebuah package baru lagi didalam package pratikum_2 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_6
+2. Kemudian buat sebuah class baru dengan nama Buku dan isikan kode berikut:
+
+     package pratikum_2.bagian_6;
+
+      public class Buku {
+      // Atribut (private)
+      private String judul;
+      private String pengarang;
+      private int tahunTerbit;
+
+       // Constructor (default)
+        public Buku() {
+        this.judul = "Unknown";
+        this.pengarang = "Unknown";
+        this.tahunTerbit = 0;
+       }
+
+       // Constructor (parameterized)
+        public Buku(String judul, String pengarang, int tahunTerbit) {
+        this.judul = judul;
+        this.pengarang = pengarang;
+        this.tahunTerbit = tahunTerbit;
+       }
+
+        // Setter dan Getter
+        public void setJudul(String judul) {
+        this.judul = judul;
+       }
+
+        public String getJudul() {
+        return judul;
+       }
+
+       public void setPengarang(String pengarang) {
+        this.pengarang = pengarang;
+       }
+
+       public String getPengarang() {
+        return pengarang;
+       }
+
+       public void setTahunTerbit(int tahunTerbit) {
+        this.tahunTerbit = tahunTerbit;
+       }
+
+       public int getTahunTerbit() {
+        return tahunTerbit;
+       }
+
+       // Method untuk menampilkan informasi buku
+        public void tampilkanInfo() {
+        System.out.println("Judul: " + judul);
+        System.out.println("Pengarang: " + pengarang);
+        System.out.println("Tahun Terbit: " + tahunTerbit);
+        System.out.println("----------------------------");
+         } 
+        }
+
+
+### analisis dan pembahasan
+
+Kode program ini mendefinisikan kelas **Buku** yang menerapkan konsep *encapsulation* melalui atribut **judul**, **pengarang**, dan **tahunTerbit** yang bersifat *private*, sehingga tidak dapat diakses langsung dari luar kelas. Kelas ini juga memiliki dua jenis konstruktor, yaitu *default constructor* yang memberikan nilai awal “Unknown” dan 0, serta *parameterized constructor* yang memungkinkan pengisian data sesuai input saat objek dibuat. Selain itu, tersedia metode *setter* dan *getter* untuk mengatur serta mengambil nilai atribut secara terkontrol. Metode **tampilkanInfo()** digunakan untuk menampilkan seluruh informasi buku dalam bentuk output yang terstruktur. Secara keseluruhan, program ini menunjukkan penerapan prinsip dasar pemrograman berorientasi objek, khususnya *encapsulation* dan fleksibilitas dalam inisialisasi objek.
+
+
+### langkah pratikum
+1. buat class baru di dalam package bagian_5 dengan nama Perpustakaan
+2. ketik kode programnya
+
+      package pratikum_2.bagian_6;
+
+      import java.util.ArrayList;
+
+      public class Perpustakaan {
+       // Atribut (private)
+      private ArrayList<Buku> daftarBuku;
+
+       // Constructor
+       public Perpustakaan() {
+        daftarBuku = new ArrayList<>();
+       }
+
+        // Method untuk menambahkan buku
+        public void tambahBuku(Buku buku) {
+        daftarBuku.add(buku);
+        System.out.println("Buku berhasil ditambahkan!");
+       }
+
+       // Method untuk menampilkan semua buku
+       public void tampilkanSemuaBuku() {
+        if (daftarBuku.isEmpty()) {
+            System.out.println("Tidak ada buku dalam perpustakaan.");
+        } else {
+            System.out.println("Daftar Buku:");
+            for (Buku buku : daftarBuku) {
+                buku.tampilkanInfo();
+            }
+         }
+        }
+
+        // Method untuk mencari buku berdasarkan judul
+         public void cariBuku(String judul) {
+        boolean ditemukan = false;
+        for (Buku buku : daftarBuku) {
+            if (buku.getJudul().equalsIgnoreCase(judul)) {
+                System.out.println("Buku ditemukan:");
+                buku.tampilkanInfo();
+                ditemukan = true;
+                break;
+            }
+        }
+        if (!ditemukan) {
+            System.out.println("Buku dengan judul \"" + judul + "\" tidak ditemukan.");
+           }
+          }
+        }
+
+
+### analisis dan pembahasan
+
+Kode program ini mendefinisikan kelas Perpustakaan yang berfungsi untuk mengelola kumpulan objek Buku menggunakan struktur data ArrayList. Atribut daftarBuku bersifat private sehingga data hanya dapat diakses melalui metode yang disediakan, sebagai bentuk penerapan encapsulation. Pada konstruktor, daftar buku diinisialisasi sebagai ArrayList kosong. Terdapat beberapa metode utama, yaitu tambahBuku() untuk menambahkan data buku, tampilkanSemuaBuku() untuk menampilkan seluruh isi perpustakaan, serta cariBuku() untuk mencari buku berdasarkan judul dengan perbandingan tidak sensitif terhadap huruf besar-kecil. Secara keseluruhan, program ini menggambarkan pengelolaan data berbasis objek yang lebih terstruktur, dinamis, dan mudah dikembangkan dalam konsep pemrograman berorientasi objek.
+
+### langkah pratikum
+1. buat class baru di dalam package bagian_6 dengan nama Main
+2. ketik kode programnya
+
+      package pratikum_2.bagian_6;
+
+      import java.util.Scanner;
+
+       public class Main {
+       public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Perpustakaan perpustakaan = new Perpustakaan();
+        int pilihan;
+
+        do {
+            // Menu
+            System.out.println("\n=== Sistem Manajemen Perpustakaan ===");
+            System.out.println("1. Tambah Buku");
+            System.out.println("2. Tampilkan Semua Buku");
+            System.out.println("3. Cari Buku");
+            System.out.println("4. Keluar");
+            System.out.print("Pilih menu: ");
+            pilihan = scanner.nextInt();
+            scanner.nextLine(); // Membersihkan newline
+
+            switch (pilihan) {
+                case 1:
+                    // Tambah Buku
+                    System.out.print("Masukkan judul buku: ");
+                    String judul = scanner.nextLine();
+                    System.out.print("Masukkan nama pengarang: ");
+                    String pengarang = scanner.nextLine();
+                    System.out.print("Masukkan tahun terbit: ");
+                    int tahunTerbit = scanner.nextInt();
+                    scanner.nextLine(); // Membersihkan newline
+
+                    Buku bukuBaru = new Buku(judul, pengarang, tahunTerbit);
+                    perpustakaan.tambahBuku(bukuBaru);
+                    break;
+
+                case 2:
+                    // Tampilkan Semua Buku
+                    perpustakaan.tampilkanSemuaBuku();
+                    break;
+
+                case 3:
+                    // Cari Buku
+                    System.out.print("Masukkan judul buku yang dicari: ");
+                    String judulCari = scanner.nextLine();
+                    perpustakaan.cariBuku(judulCari);
+                    break;
+
+                case 4:
+                    // Keluar
+                    System.out.println("Terima kasih telah menggunakan sistem ini!");
+                    break;
+
+                default:
+                    System.out.println("Pilihan tidak valid. Silakan coba.");
+            }
+        } while (pilihan != 4);
+
+        scanner.close();
+        }
+      }
+
+
+### screenshoot hasil
+
+![gambar](./gambar/gambar11.png) ![gambar](./gambar/gambar12.png)
+
+### analisis dan pembahasan
+
+Kode program ini merupakan implementasi kelas **Main** yang berfungsi sebagai antarmuka pengguna pada sistem manajemen perpustakaan berbasis console. Program menggunakan **Scanner** untuk menerima input dari pengguna serta memanfaatkan objek **Perpustakaan** sebagai pengelola data buku. Di dalamnya terdapat perulangan *do-while* yang menampilkan menu interaktif, seperti menambah buku, menampilkan seluruh data buku, mencari buku berdasarkan judul, dan keluar dari program. Setiap pilihan akan mengeksekusi metode yang sesuai pada kelas Perpustakaan, sehingga alur program menjadi lebih terstruktur dan modular. Secara keseluruhan, kode ini menggambarkan penerapan konsep pemrograman berorientasi objek yang dikombinasikan dengan interaksi pengguna, sehingga sistem menjadi lebih dinamis, terorganisir, dan mudah digunakan.
+
+
+## 3. Kesimpulan
+
+**Kesimpulan**
+
+Dari praktikum *Review Konsep Dasar OOP Menggunakan Java*, saya memahami bahwa pemrograman berorientasi objek (OOP) merupakan pendekatan yang membangun program melalui konsep class dan object. Class berperan sebagai rancangan dasar yang berisi atribut dan method, sedangkan object merupakan hasil nyata dari class yang memiliki nilai (state) serta perilaku (behavior) sesuai dengan implementasinya.
+
+Selain itu, saya juga mempelajari bagaimana penggunaan access modifier seperti *public, private, protected,* dan *default* berfungsi untuk mengatur tingkat akses terhadap atribut maupun method. Penerapan *getter* dan *setter* membantu dalam mengelola serta memodifikasi data secara lebih aman, sementara penggunaan constructor—baik default, parameterized, maupun overloading—memudahkan proses inisialisasi object sesuai kebutuhan program. Secara keseluruhan, praktikum ini memperkuat pemahaman saya dalam menerapkan konsep dasar OOP untuk membangun program yang lebih terstruktur, aman, dan mudah dikembangkan.
+
+
+## 4.Referensi
+
+Praktikum 2 : Review Konsep Dasar OOP Menggunakan Java
+
+Diakses dari:https://hackmd.io/@mohdrzu/Bygtu8g0iJg
+
+
+# Laporan 3: Review 4 Pillar OOP Menggunakan Java
 **Mata Kuliah:** Praktikum Pemrograman Desain Pattern  
 **Nama:**[Natasya kamila putri]  
 **NIM:** [2024573010050]  
@@ -11,7 +823,7 @@ Modul ini membahas review empat pilar Pemrograman Berorientasi Objek (OOP) mengg
 
 ---
 
-##  1. Pendahuluan
+##  1.Pendahuluan
 
 OOP menjadi salah satu paradigma utama dalam dunia pemrograman saat ini. Dengan OOP, konsep seperti class, object, enkapsulasi, pewarisan, polimorfisme, dan abstraksi menjadi dasar untuk membuat program yang lebih terstruktur, mudah dikembangkan, dan efisien. Modul ini disusun untuk membantu mahasiswa memahami konsep-konsep tersebut secara menyeluruh sekaligus mempraktikkannya dalam pembuatan program sederhana.
 
@@ -27,11 +839,11 @@ Melalui modul ini, mahasiswa diharapkan tidak hanya memahami teori, tetapi juga 
 ### langkah pratikum
 
 1. Buka project pada praktikum sebelumnya menggunakan intellij IDEA
-2. Buat sebuah package baru di dalam folder src dengan cara klik kanan pada folder src kemudian pilih New -> Package. Beri nama pratikum_2.
-3. Buat Sebuah package baru lagi didalam package pratikum_2 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_1
+2. Buat sebuah package baru di dalam folder src dengan cara klik kanan pada folder src kemudian pilih New -> Package. Beri nama pratikum_3.
+3. Buat Sebuah package baru lagi didalam package pratikum_3 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_1
 4. Kemudian buat sebuah class baru dengan nama Mahasiswa dan isikan kode berikut:
 
-       package pratikum_2.bagian1;
+       package pratikum_3.bagian1;
 
        public class Mahasiswa
        {
@@ -57,7 +869,7 @@ Kelas **Mahasiswa** ini menunjukkan contoh dasar pembuatan *class* di Java denga
 1. buat class baru di dalam package bagian1 dengan nama main
 2. ketik kode programnya
 
-       package pratikum_2.bagian1;
+       package pratikum_3.bagian1;
 
        public class Main {
        public static void main(String[] args) {
@@ -85,7 +897,7 @@ kelas  **Main** ini menunjukkan cara membuat dan menggunakan objek dari kelas **
 1. buat class baru di dalam package latihan dengan nama Buku
 2. ketik kode programnya
 
-       package pratikum_2.bagian1.latihan;
+       package pratikum_3.bagian1.latihan;
 
        public class Buku {
        // Atribut (encapsulation)
@@ -142,7 +954,7 @@ Kelas **Buku** ini dirancang untuk mendemonstrasikan konsep *encapsulation* dala
 1. buat class baru di dalam package latihan dengan nama Main
 2. ketik kode programnya
 
-       package pratikum_2.bagian1.latihan;
+       package pratikum_3.bagian1.latihan;
 
         public class Main {
         public static void main(String[] args) {
@@ -177,10 +989,10 @@ Program **Main** ini menampilkan penerapan prinsip *encapsulation* melalui pengg
 
 ### langkah pratikum
 
-1. Buat Sebuah package baru lagi didalam package pratikum_2 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_2
+1. Buat Sebuah package baru lagi didalam package pratikum_3 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_2
 2. Kemudian buat sebuah class baru dengan nama Mahasiswa dan isikan kode berikut:
 
-       package pratikum_2.bagian2;
+       package pratikum_3.bagian2;
 
        public class Mahasiswa {
        // Atribut private
@@ -213,7 +1025,7 @@ Kelas **Mahasiswa** ini menunjukkan penerapan konsep *encapsulation* yang lebih 
 1. buat class baru di dalam package bagian2 dengan nama Main
 2. ketik kode programnya
 
-       package pratikum_2.bagian2;
+       package pratikum_3.bagian2;
 
        public class Main {
        public static void main(String[] args) {
@@ -241,7 +1053,7 @@ Program **Main** ini memperlihatkan cara penggunaan kelas **Mahasiswa** yang sud
 1. buat class baru di dalam package latihan dengan nama Motor
 2. ketik kode programnya
 
-       package pratikum_2.bagian2.latihan;
+       package pratikum_3.bagian2.latihan;
 
        public class Motor {
        // 1. Atribut yang dienkapsulasi (menggunakan private)
@@ -277,7 +1089,7 @@ Kelas **Motor** ini merupakan contoh penerapan *encapsulation* dalam Java, di ma
 1. buat class baru di dalam package latihan dengan nama Main
 2. ketik kode programnya
 
-        package pratikum_2.bagian2.latihan;
+        package pratikum_3.bagian2.latihan;
 
         public class Main {
         public static void main(String[] args) {
@@ -306,11 +1118,11 @@ Program **Main** ini memperlihatkan cara penggunaan kelas **Motor** yang telah m
 
 ### langkah pratikum
 
-1. Buat Sebuah package baru lagi didalam package pratikum_2 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_3
+1. Buat Sebuah package baru lagi didalam package pratikum_3 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_3
 2. Buat package baru di dalam bagian_3 dan beri nama pewarisan
 3. Kemudian buat sebuah class baru dengan nama Kendaraan dan isikan kode berikut:
 
-       package pratikum_2.bagian3.pewarisan;
+       package pratikum_3.bagian3.pewarisan;
 
        public class Kendaraan {
        String merk;
@@ -330,7 +1142,7 @@ Kelas **Kendaraan** ini merupakan contoh dasar penerapan konsep *inheritance* da
 1. buat class baru di dalam package bagian 3 dengan nama Mobil
 2. ketik kode programnya
 
-       package pratikum_2.bagian3.pewarisan;
+       package pratikum_3.bagian3.pewarisan;
 
         class Mobil extends Kendaraan {
          int jumlahPintu;
@@ -349,7 +1161,7 @@ Kelas **Mobil** merupakan turunan dari kelas **Kendaraan**, sehingga mencerminka
 1. buat class baru di dalam package bagian 3 dengan nama Main
 2. ketik kode programnya
 
-        package pratikum_2.bagian3.pewarisan;
+        package pratikum_3.bagian3.pewarisan;
 
         public class Main {
         public static void main(String[] args) {
@@ -376,7 +1188,7 @@ Program **Main** ini menunjukkan implementasi langsung dari konsep *inheritance*
 1. Buat package baru di dalam bagian_3 dan beri nama komposisi
 2. Kemudian buat sebuah class baru dengan nama Mesin dan isikan kode berikut:
 
-       package pratikum_2.bagian3.komposisi;
+       package pratikum_3.bagian3.komposisi;
 
        public class Mesin {
        void hidupkan() {
@@ -397,7 +1209,7 @@ Kelas **Mesin** pada program ini merepresentasikan konsep *composition* sebagai 
 1. buat class baru lagi  di dalam package komposisi dengan nama Mobil
 2. ketik kode programnya
 
-       package pratikum_2.bagian3.komposisi;
+       package pratikum_3.bagian3.komposisi;
 
        public class Mobil {
        private final Mesin mesin; // Composition
@@ -426,7 +1238,7 @@ Kelas **Mobil** pada kode ini menunjukkan penerapan konsep *composition*, di man
 1. buat class baru lagi  di dalam package komposisi dengan nama Main
 2. ketik kode programnya
 
-       package pratikum_2.bagian3.komposisi;
+       package pratikum_3.bagian3.komposisi;
 
        public class Main {
        public static void main(String[] args) {
@@ -448,7 +1260,7 @@ Program **Main** ini menggambarkan bagaimana konsep *composition* diimplementasi
 
 1. Di dalam package bagian_3, buat sebuah class baru dan beri nama Main dan isikan kode berikut:
 
-        package pratikum_2.bagian3;
+        package pratikum_3.bagian3;
 
         public class Main {
         // Class Mesin (Composition)
@@ -500,7 +1312,7 @@ Program ini memperlihatkan kombinasi konsep *composition* dan *inheritance* dala
 1. buat class baru di dalam package latihan dengan nama Laptop
 2. ketik kode programnya
 
-       package pratikum_2.bagian3.latihan;
+       package pratikum_3.bagian3.latihan;
 
        public class Laptop {
        // Komponen sebagai bagian dari Laptop
@@ -548,7 +1360,7 @@ Program ini menampilkan konsep *composition* di mana kelas **Laptop** memiliki k
 1. buat class baru di dalam package latihan dengan nama Main
 2. ketik kode programnya
 
-       package pratikum_2.bagian3.latihan;
+       package pratikum_3.bagian3.latihan;
 
        public class Main {
        public static void main(String[] args) {
@@ -570,11 +1382,11 @@ Program **Main** ini berfungsi untuk menguji kelas **Laptop** yang sudah dibuat 
 
 ### langkah pratikum
 
-1. Buat Sebuah package baru lagi didalam package pratikum_2 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_4
+1. Buat Sebuah package baru lagi didalam package pratikum_3 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_4
 2. Kemudian buat sebuah package baru di dalam bagian_4 dan beri nama overriding
 3. Kemudian buat sebuah class baru dengan nama Hewan dan isikan kode berikut:
 
-       package pratikum_2.bagian4.Overriding;
+       package pratikum_3.bagian4.Overriding;
 
        public class Hewan {
        void bersuara() {
@@ -591,7 +1403,7 @@ Kelas **Hewan** ini berfungsi sebagai *superclass* sederhana yang merepresentasi
 1. buat class baru di dalam package overriding dengan nama Kucing
 2. ketik kode programnya
 
-       package pratikum_2.bagian4.Overriding;
+       package pratikum_3.bagian4.Overriding;
 
        public class Kucing extends Hewan{
        @Override
@@ -609,7 +1421,7 @@ Kelas **Kucing** ini merupakan *subclass* dari **Hewan** yang memperlihatkan kon
 1. buat class baru di dalam package overriding dengan nama Anjing
 2. ketik kode programnya
 
-       package pratikum_2.bagian4.Overriding;
+       package pratikum_3.bagian4.Overriding;
 
        public class Anjing extends Hewan{
        @Override
@@ -628,7 +1440,7 @@ Kelas **Anjing** ini adalah *subclass* dari **Hewan** yang menunjukkan penerapan
 1. buat class baru di dalam package overriding dengan nama Main
 2. ketik kode programnya
 
-       package pratikum_2.bagian4.Overriding;
+       package pratikum_3.bagian4.Overriding;
 
        public class Main {
        public static void main(String[] args) {
@@ -654,7 +1466,7 @@ Program **Main** ini mendemonstrasikan konsep *polimorfisme* pada Java, di mana 
 1. Buat sebuah package baru di dalam bagian_4 dan beri nama overloading
 2. Kemudian buat sebuah class baru dengan nama Kalkulator dan isikan kode berikut:
 
-       package pratikum_2.bagian4.overloading;
+       package pratikum_3.bagian4.overloading;
 
        public class Kalkulator {
        // Method overloading: penjumlahan dua bilangan bulat
@@ -682,7 +1494,7 @@ Kelas **Kalkulator** ini menunjukkan penerapan *method overloading* di Java, di 
 1.buat class baru di dalam package overloading dengan nama Main
 2. ketik kode programnya
 
-       package pratikum_2.bagian4.overloading;
+       package pratikum_3.bagian4.overloading;
 
        public class Main {
        public static void main(String[] args) {
@@ -709,7 +1521,7 @@ Program ini mendemonstrasikan konsep *method overloading* melalui kelas **Kalkul
 1. buat class baru di dalam package latihan dengan nama Bangun Datar
 2. ketik kode programnya
 
-        package pratikum_2.bagian4.latihan;
+        package pratikum_3.bagian4.latihan;
 
        public class BangunDatar {
        public void hitungLuas() {
@@ -758,7 +1570,7 @@ Kode program ini memperlihatkan konsep *inheritance* dan *method overriding* dal
 1. buat class baru di dalam package latihan dengan nama Matematika
 2. ketik kode programnya
 
-       package pratikum_2.bagian4.latihan;
+       package pratikum_3.bagian4.latihan;
 
        public class Matematika {
        // 1. Method tambah() dengan 2 parameter int
@@ -785,7 +1597,7 @@ Kode program ini menampilkan konsep *method overloading* dalam Java dengan cara 
 1. buat class baru di dalam package latihan dengan nama Main
 2. ketik kode programnya
 
-       package pratikum_2.bagian4.latihan;
+       package pratikum_3.bagian4.latihan;
 
        public class Main {
        public static void main(String[] args) {
@@ -820,11 +1632,11 @@ Kode program ini mendemonstrasikan dua konsep penting dalam pemrograman berorien
 
 ### langkah pratikum
 
-1. Buat Sebuah package baru lagi didalam package pratikum_2 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_5
+1. Buat Sebuah package baru lagi didalam package pratikum_3 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_5
 2. Buat sebuah package baru di dalam bagian_5 dan beri nama abstrak.
 3. Kemudian buat sebuah class baru di dalam abtrak dengan nama Hewan dan isikan kode berikut:
 
-       package pratikum_2.bagian5.abstrak;
+       package pratikum_3.bagian5.abstrak;
 
         public abstract class Hewan {
         // Atribut
@@ -847,7 +1659,7 @@ Kode program ini memperkenalkan konsep *abstraksi* dalam Java melalui kelas **He
 1. buat class baru di dalam package abstrak dengan nama Kucing
 2. ketik kode programnya
 
-       package pratikum_2.bagian5.abstrak;
+       package pratikum_3.bagian5.abstrak;
 
         public class Kucing extends Hewan {
         // Subclass dari abstract class
@@ -865,7 +1677,7 @@ Kode ini menampilkan implementasi *abstract class* **Hewan** melalui subclass **
 1. buat class baru di dalam package abstrak dengan nama Anjing
 2. ketik kode programnya
 
-       package pratikum_2.bagian5.abstrak;
+       package pratikum_3.bagian5.abstrak;
 
        public class Anjing extends Hewan {
        @Override
@@ -884,7 +1696,7 @@ Kode ini memperlihatkan subclass **Anjing** yang merupakan turunan dari *abstrac
 1. buat class baru di dalam package abstrak dengan nama Main
 2. ketik kode programnya
 
-       package pratikum_2.bagian5.abstrak;
+       package pratikum_3.bagian5.abstrak;
 
        public class Main {
        public static void main(String[] args) {
@@ -913,7 +1725,7 @@ Kode program ini mendemonstrasikan penggunaan *abstract class* **Hewan** dan kon
 1. Buat sebuah package baru di dalam bagian_5 dan beri nama antarmuka.
 2. Kemudian buat sebuah interface baru di dalam antarmuka dengan nama Bergerak dan isikan kode berikut:
 
-       package pratikum_2.bagian5.antarmuka;
+       package pratikum_3.bagian5.antarmuka;
 
         public interface Bergerak {
         // Method abstrak
@@ -939,7 +1751,7 @@ Kode program ini menampilkan konsep *interface* di Java melalui **Bergerak**, ya
 1. buat class baru di dalam package antarmuka dengan nama Mobil
 2. ketik kode programnya
 
-       package pratikum_2.bagian5.antarmuka;
+       package pratikum_3.bagian5.antarmuka;
 
        public class Mobil implements Bergerak {
        @Override
@@ -956,7 +1768,7 @@ Kode program ini mendemonstrasikan penerapan *interface* **Bergerak** pada kelas
 1. buat class baru di dalam package antarmuka dengan nama Pesawat
 2. ketik kode programnya
 
-       package pratikum_2.bagian5.antarmuka;
+       package pratikum_3.bagian5.antarmuka;
 
        public class Pesawat implements Bergerak{
        @Override
@@ -973,7 +1785,7 @@ Kode program ini memperlihatkan bagaimana kelas **Pesawat** mengimplementasikan 
 1. buat class baru di dalam package antarmuka dengan nama Main
 2. ketik kode programnya
 
-       package pratikum_2.bagian5.antarmuka;
+       package pratikum_3.bagian5.antarmuka;
 
        public class Main {
        public static void main(String[] args) {
@@ -1003,7 +1815,7 @@ Kode program ini mendemonstrasikan penggunaan *interface* **Bergerak** secara pr
 
 1. Didalam package bagian_5, buatlah sebuah class baru dan beri nama Main dan isikan kode berikut:
 
-       package pratikum_2.bagian5;
+       package pratikum_3.bagian5;
 
         interface Terbang {
         void terbang();
@@ -1054,7 +1866,7 @@ Kode program ini menunjukkan kombinasi penggunaan *abstract class* dan *interfac
 1. buat class baru di dalam package latihan dengan nama Berenag
 2. ketik kode programnya
 
-       package pratikum_2.bagian5.latihan;
+       package pratikum_3.bagian5.latihan;
 
        public interface Berenang {
        void berenang(); // Secara otomatis bersifat public dan abstract
@@ -1100,7 +1912,7 @@ Kode program ini menampilkan penerapan *abstract class* dan *interface* secara b
 1. buat class baru di dalam package latihan dengan nama Main
 2. ketik kode programnya
 
-       package pratikum_2.bagian5.latihan;
+       package pratikum_3.bagian5.latihan;
 
        public class Main {
        public static void main(String[] args) {
@@ -1124,10 +1936,10 @@ Kode program ini mendemonstrasikan penggunaan *abstract class* dan *interface* s
 
 ### langkah pratikum
 
-1. Buat Sebuah package baru lagi didalam package pratikum_2 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_6
+1. Buat Sebuah package baru lagi didalam package pratikum_3 dengan cara klik kanan dan pilih New -> Package. Beri nama bagian_6
 2. Kemudian buat sebuah class baru dengan nama Tiket dan isikan kode berikut:
 
-       package pratikum_2.bagian6;
+       package pratikum_3.bagian6;
 
         public abstract class Tiket {
         private final String jenis;
@@ -1158,7 +1970,7 @@ Kode program ini memperkenalkan konsep *abstract class* melalui kelas **Tiket**,
 1. buat class baru di dalam package bagian 6  dengan nama tiket reguler
 2. ketik kode programnya
 
-       package pratikum_2.bagian6;
+       package pratikum_3.bagian6;
 
         public class TiketReguler extends Tiket {
         public TiketReguler() {
@@ -1179,7 +1991,7 @@ Kode program ini memperlihatkan implementasi *subclass* dari *abstract class* **
 1. buat class baru di dalam package bagian 6  dengan nama tiket VIP
 2. ketik kode programnya
 
-       package pratikum_2.bagian6;
+       package pratikum_3.bagian6;
 
        public class TiketVIP extends Tiket {
         public TiketVIP() {
@@ -1200,7 +2012,7 @@ Kode program ini menampilkan implementasi kelas **TiketVIP** sebagai *subclass* 
 1. buat class baru di dalam package bagian 6  dengan nama pesanan
 2. ketik kode programnya
 
-        package pratikum_2.bagian6;
+        package pratikum_3.bagian6;
 
         public class Pesanan {
         private final String namaPemesan;
@@ -1251,7 +2063,7 @@ Kode program ini memperkenalkan kelas **Pesanan** yang merepresentasikan pemesan
 1. buat class baru di dalam package bagian 6  dengan nama konferensiApp
 2. ketik kode programnya
 
-       package pratikum_2.bagian6;
+       package pratikum_3.bagian6;
 
 
        import java.util.ArrayList;
@@ -1374,6 +2186,7 @@ Kode program ini memperkenalkan kelas **Pesanan** yang merepresentasikan pemesan
 
 ### screenshoot hasil
 
+![gambar](./gambar/gambar15.png) ![gambar](./gambar/gambar16.png)
 
 ### analisi dan pembahasan
 
@@ -1382,6 +2195,9 @@ Kode program **KonferensiApp** ini merupakan implementasi sederhana dari aplikas
 
 ## 3. Kesimpulan
 
+Dari praktikum Review 4 Pillar OOP menggunakan Java, saya memahami kembali konsep dasar dalam pemrograman berorientasi objek, yaitu class, object, encapsulation, inheritance, polymorphism, dan abstraction. Setiap konsep memiliki peran penting dalam membangun struktur program yang terorganisir, di mana class menjadi dasar pembentukan object, serta prinsip-prinsip OOP membantu dalam mengelola data dan perilaku secara lebih efektif.
+
+Melalui pembuatan program sederhana, saya juga dapat menerapkan langsung konsep-konsep tersebut dalam penyelesaian masalah pemrograman. Hal ini membuat saya lebih memahami bagaimana OOP digunakan untuk menghasilkan kode yang lebih modular, mudah dikembangkan, dan mudah dipelihara. Secara keseluruhan, praktikum ini memberikan pemahaman yang lebih kuat tentang pentingnya penerapan prinsip OOP dalam pengembangan aplikasi berbasis Java.
 
 ## 4.Referensi
 
